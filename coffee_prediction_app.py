@@ -8,33 +8,32 @@ Original file is located at
 """
 
 # Commented out IPython magic to ensure Python compatibility.
-# %%writefile app.py
-# import streamlit as st
-# import pandas as pd
-# from sklearn.tree import DecisionTreeRegressor
-# 
-# # Load your trained model (replace with your actual model and code to load it)
-# model = DecisionTreeRegressor()
-# model.fit(X_train, y_train)
-# 
-# # Define the input features for the bot
-# features = ['Token_0', 'Token_1', 'Token_2', 'Token_3', 'Token_4']
-# 
-# # Create the Streamlit app
-# st.title("Coffee Recommendation Bot")
-# 
-# # Get user input
-# user_input = {}
-# for feature in features:
-#     user_input[feature] = st.slider(feature, 0, 10, 5)
-# 
-# # Create a DataFrame from user input
-# input_df = pd.DataFrame([user_input])
-# 
-# # Make prediction using the loaded model
-# prediction = model.predict(input_df)
-# 
-# # Display the recommended coffee type
-# predicted_labels = ['Cappuccino', 'Espresso', 'Latte']
-# predicted_index = prediction[0].argmax()
-# st.write("Recommended coffee type:", predicted_labels[predicted_index])
+%%writefile app.py
+import streamlit as st
+import pandas as pd
+from sklearn.tree import DecisionTreeRegressor
+
+# Load your trained model (replace with your actual model and code to load it)
+model = DecisionTreeRegressor()
+model.fit(X_train, y_train)
+
+# Define the input features for the bot
+features = ['Token_0', 'Token_1', 'Token_2', 'Token_3', 'Token_4']
+
+# Create the Streamlit app
+st.title("Coffee Recommendation Bot")
+
+# Get user input
+user_input = {}
+for feature in features:
+     user_input[feature] = st.slider(feature, 0, 10, 5)
+# Create a DataFrame from user input
+ input_df = pd.DataFrame([user_input])
+ 
+# Make prediction using the loaded model
+prediction = model.predict(input_df)
+ 
+# Display the recommended coffee type
+predicted_labels = ['Cappuccino', 'Espresso', 'Latte']
+predicted_index = prediction[0].argmax()
+st.write("Recommended coffee type:", predicted_labels[predicted_index])
