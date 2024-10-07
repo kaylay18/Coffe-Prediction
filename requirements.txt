@@ -2,10 +2,5 @@ pandas
 files
 seaborn
 matplotlib
-train_test_split
-KFold
-mean_squared_error
-mean_absolute_error
-r2_score
-DecisionTreeRegressor
+sklearn
 streamlit
