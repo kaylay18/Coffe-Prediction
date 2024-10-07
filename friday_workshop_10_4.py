@@ -83,13 +83,16 @@ model.fit(X_train, y_train)
 # Define the input features for the bot
 features = ['Token_0', 'Token_1', 'Token_2', 'Token_3', 'Token_4', 'Token_5', 'Token_6', 'Token_7', 'Token_8', 'Token_9']
 
+feature_dict = {'Token_0' : 'Time of Day', 'Token_1' : 'Coffee Strength',
+                'Token_2' : 'Sweetness', 'Token_3' : 'Type of Milk', 'Token_4' : 'Coffee Temperature', 'Token_5' : 'Prefers Flavored', 'Token_6' : 'Caffeine Tolerance', 'Token_7' : 'Preferred Bean', 'Token_8' : 'Coffee Size', 'Token_9' : 'Dietary Restrictions'
+                }
 # Create the Streamlit app
 st.title("Coffee Recommendation Bot")
 
 # Get user input
 user_input = {}
 for feature in features:
-    user_input[feature] = st.slider(feature, 0, 10, 5)
+    user_input[feature] = st.slider(feature_dict[feature], 0, 10, 5)
 
 # Create a DataFrame from user input
 input_df = pd.DataFrame([user_input])
