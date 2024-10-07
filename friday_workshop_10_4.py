@@ -8,7 +8,7 @@ Original file is located at
 """
 
 import pandas as pd
-from google.colab import files
+#from google.colab import files
 
 # Loading dataset
 uploaded = files.upload()
