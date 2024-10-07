@@ -1,7 +1,7 @@
 pandas
 files
 seaborn
-matplotlib.pyplot
+matplotlib
 re
 train_test_split
 KFold
