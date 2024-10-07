@@ -102,4 +102,4 @@ print(X_test.columns)
 # predicted_index = prediction[0].argmax()
 # st.write("Recommended coffee type:", predicted_labels[predicted_index])
 
-!streamlit run app.py
+#!streamlit run app.py
