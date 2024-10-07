@@ -81,7 +81,7 @@ model = DecisionTreeRegressor()
 model.fit(X_train, y_train)
 
 # Define the input features for the bot
-features = ['Token_0', 'Token_1', 'Token_2', 'Token_3', 'Token_4']
+features = ['Token_0', 'Token_1', 'Token_2', 'Token_3', 'Token_4', 'Token_5', 'Token_6', 'Token_7', 'Token_7']
 
 # Create the Streamlit app
 st.title("Coffee Recommendation Bot")
