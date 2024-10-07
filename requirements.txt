@@ -2,7 +2,6 @@ pandas
 files
 seaborn
 matplotlib
-re
 train_test_split
 KFold
 mean_squared_error
