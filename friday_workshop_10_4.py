@@ -9,10 +9,9 @@ Original file is located at
 
 import pandas as pd
 # from google.colab 
-import files
+# import files
 
 # Loading dataset
-uploaded = files.upload()
 file_name = "Coffee order dataset.xlsx"
 df = pd.read_excel(file_name)
 
