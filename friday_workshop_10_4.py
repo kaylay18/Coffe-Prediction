@@ -68,7 +68,7 @@ for train_index, test_index in kfold.split(X):
 
 print(X_test.columns)
 
-!pip install streamlit scikit-learn pyngrok
+#!pip install streamlit scikit-learn pyngrok
 
 # Commented out IPython magic to ensure Python compatibility.
 # %%writefile app.py
